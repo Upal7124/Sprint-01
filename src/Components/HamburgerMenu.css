@@ -1,0 +1,44 @@
+.hamburger-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  position: fixed;
+}
+.hamburger-menu {
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hamburger-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: right;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.hamburger-list li {
+  border-bottom: 1px solid #9ca3af;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-list li:last-child {
+  border-bottom: none;
+}
+
+.hamburger-list li:hover {
+  background-color: #9db6d8;
+}
+@media (min-width: 768px) {
+  .hamburger-overlay {
+    display: none;
+  }
+}
