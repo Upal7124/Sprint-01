@@ -1,16 +1,8 @@
-/* =========================
-   CSS Reset
-========================= */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* =========================
-   Root
-========================= */
 
 html {
   scroll-behavior: smooth;
