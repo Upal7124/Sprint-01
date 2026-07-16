@@ -8,6 +8,10 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
   const [isOpenHam, setIsOpenHam] = useState(false);
 
+  const [isDark, setIsDark] = useState(
+    localStorage.getItem("theme") === "dark",
+  );
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -19,10 +23,6 @@ const Navbar = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const [isDark, setIsDark] = useState(
-    localStorage.getItem("theme") === "dark",
-  );
 
   useEffect(() => {
     if (isDark) {
@@ -36,48 +36,50 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 flex h-16 w-full items-center bg-blue-700 px-4 md:h-20 dark:bg-[#1b1b1b]">
-        <div className="flex h-20 w-[150px] items-center gap-3 py-4 md:h-28 md:w-[200px] md:gap-4">
+      <nav className="fixed top-0 left-0 z-50 flex h-16 w-full items-center px-4 md:h-20 bg-white/20 backdrop-blur-2xl border-b border-white/30 shadow-xl dark:bg-zinc-900/50 dark:border-white/10 transition-all duration-300">
+        <div className="flex h-20 w-[170px] items-center gap-4 md:h-28 md:w-[220px]">
           <img
             src={logo}
-            loading="lazy"
             alt="Prodesk Logo"
+            loading="lazy"
             className="h-20 w-20 object-contain md:h-28 md:w-28"
           />
 
           <button
             onClick={() => setIsDark(!isDark)}
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-xl text-[#fff8dc] transition duration-300 hover:scale-110 hover:bg-white/35 active:scale-95 dark:bg-white/10 dark:text-[#ffd54f] md:h-[42px] md:w-[42px] cursor-pointer"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/25 backdrop-blur-md text-xl text-yellow-100 shadow-md transition-all duration-300 hover:scale-110 hover:bg-white/40 active:scale-95 dark:bg-white/10 dark:border-white/10 dark:text-yellow-300 cursor-pointer"
           >
             {isDark ? <MdLightMode /> : <MdDarkMode />}
           </button>
         </div>
-
         <div className="ml-auto hidden md:block">
-          <ul className="flex text-white">
-            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
-              <a href="#home">Home</a>
-            </li>
-
-            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
-              <a href="#home">About</a>
-            </li>
-
-            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
-              <a href="#services">Services</a>
-            </li>
-
-            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
-              <a href="#footer">Contact</a>
-            </li>
+          <ul className="flex items-center gap-2">
+            {[
+              { name: "Home", link: "#home" },
+              { name: "About", link: "#home" },
+              { name: "Services", link: "#services" },
+              { name: "Contact", link: "#footer" },
+            ].map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.link}
+                  className="rounded-md px-4 py-2 text-white font-medium drop-shadow-md transition-all duration-300 hover:bg-white/10 hover:text-yellow-200
+                  dark:hover:bg-white/10 dark:hover:text-yellow-300
+                  "
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <button
           onClick={() => setIsOpenHam(!isOpenHam)}
           aria-label={isOpenHam ? "Close menu" : "Open menu"}
-          className="ml-auto text-[28px] text-white md:hidden dark:text-white"
+          className="ml-auto text-3xl text-white drop-shadow-md transition-transform duration-300 hover:scale-110 md:hidden
+          "
         >
           {isOpenHam ? <IoClose /> : <GiHamburgerMenu />}
         </button>
