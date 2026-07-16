@@ -3,7 +3,7 @@ import Hero from "./Components/Hero";
 import Services from "./Components/Services";
 import Footer from "./Components/Footer";
 
-import bg from "./assets/bg_2.jpg";
+import bg from "./assets/bg.webp";
 
 const App = () => {
   return (

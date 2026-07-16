@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import HamburgerMenu from "./HamburgerMenu";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
@@ -40,6 +40,7 @@ const Navbar = () => {
         <div className="flex h-20 w-[150px] items-center gap-3 py-4 md:h-28 md:w-[200px] md:gap-4">
           <img
             src={logo}
+            loading="lazy"
             alt="Prodesk Logo"
             className="h-20 w-20 object-contain md:h-28 md:w-28"
           />
