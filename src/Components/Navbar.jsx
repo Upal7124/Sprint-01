@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 flex h-16 w-full items-center bg-[#6495ED] px-4 md:h-20 dark:bg-[#1b1b1b]">
+      <nav className="fixed top-0 left-0 z-50 flex h-16 w-full items-center bg-blue-700 px-4 md:h-20 dark:bg-[#1b1b1b]">
         <div className="flex h-20 w-[150px] items-center gap-3 py-4 md:h-28 md:w-[200px] md:gap-4">
           <img
             src={logo}
@@ -55,17 +55,20 @@ const Navbar = () => {
         </div>
 
         <div className="ml-auto hidden md:block">
-          <ul className="flex text-[#fef3c7] dark:text-white">
-            <li className="cursor-pointer px-4 transition hover:text-white dark:hover:text-[#ffd54f]">
+          <ul className="flex text-white">
+            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
               <a href="#home">Home</a>
             </li>
-            <li className="cursor-pointer px-4 transition hover:text-white dark:hover:text-[#ffd54f]">
+
+            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
               <a href="#home">About</a>
             </li>
-            <li className="cursor-pointer px-4 transition hover:text-white dark:hover:text-[#ffd54f]">
+
+            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
               <a href="#services">Services</a>
             </li>
-            <li className="cursor-pointer px-4 transition hover:text-white dark:hover:text-[#ffd54f]">
+
+            <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
               Contact
             </li>
           </ul>
@@ -74,7 +77,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpenHam(!isOpenHam)}
           aria-label={isOpenHam ? "Close menu" : "Open menu"}
-          className="ml-auto text-[28px] text-[#fef3c7] md:hidden dark:text-white"
+          className="ml-auto text-[28px] text-white md:hidden dark:text-white"
         >
           {isOpenHam ? <IoClose /> : <GiHamburgerMenu />}
         </button>
