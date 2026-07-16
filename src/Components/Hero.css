@@ -121,9 +121,8 @@ body.dark-theme .hero-content p {
 }
 
 body.dark-theme .hero-btn {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
   color: #ffffff;
-
   border: 1px solid rgba(255, 255, 255, 0.12);
 
   box-shadow:
@@ -134,7 +133,7 @@ body.dark-theme .hero-btn {
 }
 
 body.dark-theme .hero-btn:hover {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
 
   transform: translateY(-3px) scale(1.03);
 

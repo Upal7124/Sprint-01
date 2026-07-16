@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Services from "./Components/Services";
@@ -9,13 +7,16 @@ import bg from "./assets/bg_2.jpg";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="min-h-screen">
       <Navbar />
 
-      <div className="main-content" style={{ backgroundImage: `url(${bg})` }}>
+      <main
+        className="bg-cover bg-center bg-no-repeat md:bg-fixed"
+        style={{ backgroundImage: `url(${bg})` }}
+      >
         <Hero />
         <Services />
-      </div>
+      </main>
 
       <Footer />
     </div>
