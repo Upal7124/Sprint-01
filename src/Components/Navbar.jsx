@@ -48,7 +48,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsDark(!isDark)}
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-xl text-[#fff8dc] transition duration-300 hover:scale-110 hover:bg-white/35 active:scale-95 dark:bg-white/10 dark:text-[#ffd54f] md:h-[42px] md:w-[42px]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-xl text-[#fff8dc] transition duration-300 hover:scale-110 hover:bg-white/35 active:scale-95 dark:bg-white/10 dark:text-[#ffd54f] md:h-[42px] md:w-[42px] cursor-pointer"
           >
             {isDark ? <MdLightMode /> : <MdDarkMode />}
           </button>
@@ -69,7 +69,7 @@ const Navbar = () => {
             </li>
 
             <li className="cursor-pointer px-4 text-white transition duration-200 hover:text-yellow-200 hover:underline focus-visible:text-yellow-200 focus-visible:underline focus-visible:outline-none dark:hover:text-[#ffd54f]">
-              Contact
+              <a href="#footer">Contact</a>
             </li>
           </ul>
         </div>

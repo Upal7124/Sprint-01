@@ -16,7 +16,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <button className="mt-8 rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700 dark:bg-[#1b1b1b] dark:text-white dark:hover:bg-white dark:hover:text-black">
+      <button className="mt-8 rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-2xl active:scale-95 dark:bg-[#1b1b1b] dark:text-white dark:hover:-translate-y-1 dark:hover:scale-105 dark:hover:bg-white dark:hover:text-black dark:hover:shadow-[0_0_25px_rgba(255,213,79,0.45)] cursor-pointer">
         Get Started
       </button>
     </section>

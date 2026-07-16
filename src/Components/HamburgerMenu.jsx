@@ -28,7 +28,7 @@ const HamburgerMenu = ({ setIsOpenHam }) => {
             className="cursor-pointer px-6 py-4 transition-colors duration-200 hover:bg-[#9db6d8] dark:text-white dark:hover:bg-[#2f2f2f]"
             onClick={() => setIsOpenHam(false)}
           >
-            Contact
+            <a href="#footer">Contact</a>
           </li>
         </ul>
       </div>

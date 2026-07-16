@@ -2,7 +2,10 @@ import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#6495ed] px-6 py-5 text-gray-900 dark:border-t dark:border-white/10 dark:bg-[#1b1b1b] dark:text-[#f5f5f5]">
+    <footer
+      className="bg-[#6495ed] px-6 py-5 text-gray-900 dark:border-t dark:border-white/10 dark:bg-[#1b1b1b] dark:text-[#f5f5f5]"
+      id="footer"
+    >
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 md:flex-row">
         <div className="flex gap-4">
           <a
