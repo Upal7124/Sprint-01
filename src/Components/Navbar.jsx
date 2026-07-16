@@ -47,6 +47,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsDark(!isDark)}
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-xl text-[#fff8dc] transition duration-300 hover:scale-110 hover:bg-white/35 active:scale-95 dark:bg-white/10 dark:text-[#ffd54f] md:h-[42px] md:w-[42px]"
           >
             {isDark ? <MdLightMode /> : <MdDarkMode />}
@@ -72,6 +73,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setIsOpenHam(!isOpenHam)}
+          aria-label={isOpenHam ? "Close menu" : "Open menu"}
           className="ml-auto text-[28px] text-[#fef3c7] md:hidden dark:text-white"
         >
           {isOpenHam ? <IoClose /> : <GiHamburgerMenu />}

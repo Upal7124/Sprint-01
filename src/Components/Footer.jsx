@@ -9,6 +9,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/prodesk-it/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className="text-[28px] text-white transition-all duration-300 hover:scale-110 hover:text-blue-100 dark:text-[#f5f5f5] dark:hover:scale-115 dark:hover:text-[#ffd54f]"
           >
             <FaLinkedin />
@@ -18,6 +19,7 @@ const Footer = () => {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="X (Twitter)"
             className="text-[28px] text-white transition-all duration-300 hover:scale-110 hover:text-blue-100 dark:text-[#f5f5f5] dark:hover:scale-115 dark:hover:text-[#ffd54f]"
           >
             <FaXTwitter />
